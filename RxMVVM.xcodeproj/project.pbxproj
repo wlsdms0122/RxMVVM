@@ -1,0 +1,777 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27F0D0B26F85B13C52756A58 /* Pods_RxMVVMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6170822D24E3683E82D5681C /* Pods_RxMVVMTests.framework */; };
+		C84DCE1EC4254A5F97328FEF /* Pods_RxMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA1B7DFA8152FAF9A393132 /* Pods_RxMVVM.framework */; };
+		F3422A382402449300B5B05F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3422A372402449300B5B05F /* Coordinator.swift */; };
+		F3422A3A2402457E00B5B05F /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3422A392402457E00B5B05F /* Logger.swift */; };
+		F3422A3C24026D6400B5B05F /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3422A3B24026D6400B5B05F /* BaseViewModel.swift */; };
+		F3422A3E24026DC600B5B05F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3422A3D24026DC600B5B05F /* BaseViewController.swift */; };
+		F3422A412402719A00B5B05F /* ColorDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3422A402402719A00B5B05F /* ColorDetailView.swift */; };
+		F3422A43240271A100B5B05F /* ColorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3422A42240271A100B5B05F /* ColorDetailViewController.swift */; };
+		F3422A45240271A900B5B05F /* ColorDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3422A44240271A900B5B05F /* ColorDetailViewModel.swift */; };
+		F3422A47240271B000B5B05F /* ColorDetailViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3422A46240271B000B5B05F /* ColorDetailViewCoordinator.swift */; };
+		F3422A49240271B800B5B05F /* ColorDetailViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3422A48240271B800B5B05F /* ColorDetailViewBuilder.swift */; };
+		F3422A4D240273D600B5B05F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3422A4C240273D600B5B05F /* NetworkService.swift */; };
+		F3422A4F240273E200B5B05F /* ColorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3422A4E240273E200B5B05F /* ColorService.swift */; };
+		F3422A51240274B900B5B05F /* JSONCodec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3422A50240274B900B5B05F /* JSONCodec.swift */; };
+		F3D535DC24023A4900A7D184 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D535DB24023A4900A7D184 /* AppDelegate.swift */; };
+		F3D535E024023A4900A7D184 /* ColorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D535DF24023A4900A7D184 /* ColorListViewController.swift */; };
+		F3D535E524023A4D00A7D184 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3D535E424023A4D00A7D184 /* Assets.xcassets */; };
+		F3D535E824023A4D00A7D184 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3D535E624023A4D00A7D184 /* LaunchScreen.storyboard */; };
+		F3D535F324023A4D00A7D184 /* RxMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D535F224023A4D00A7D184 /* RxMVVMTests.swift */; };
+		F3D5360624023B9100A7D184 /* ColorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D5360524023B9100A7D184 /* ColorListView.swift */; };
+		F3D5360824023C6900A7D184 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D5360724023C6900A7D184 /* Constants.swift */; };
+		F3D5360A24023CB900A7D184 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3D5360924023CB900A7D184 /* Colors.xcassets */; };
+		F3D5360C24023DFC00A7D184 /* ColorListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D5360B24023DFC00A7D184 /* ColorListViewModel.swift */; };
+		F3D5360E24023E4700A7D184 /* ColorListViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D5360D24023E4700A7D184 /* ColorListViewCoordinator.swift */; };
+		F3D5361024023E4E00A7D184 /* ColorListViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D5360F24023E4E00A7D184 /* ColorListViewBuilder.swift */; };
+		F3D5361224023E7F00A7D184 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D5361124023E7F00A7D184 /* AppCoordinator.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F3D535EF24023A4D00A7D184 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3D535D024023A4900A7D184 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3D535D724023A4900A7D184;
+			remoteInfo = RxMVVM;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05F8505A44BE70E86307B38B /* Pods-RxMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMVVM.release.xcconfig"; path = "Target Support Files/Pods-RxMVVM/Pods-RxMVVM.release.xcconfig"; sourceTree = "<group>"; };
+		6170822D24E3683E82D5681C /* Pods_RxMVVMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMVVMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A2AA438D72B10907A1A8071 /* Pods-RxMVVMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMVVMTests.debug.xcconfig"; path = "Target Support Files/Pods-RxMVVMTests/Pods-RxMVVMTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ADA1B7DFA8152FAF9A393132 /* Pods_RxMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B43046790A444527139F5C97 /* Pods-RxMVVMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMVVMTests.release.xcconfig"; path = "Target Support Files/Pods-RxMVVMTests/Pods-RxMVVMTests.release.xcconfig"; sourceTree = "<group>"; };
+		F079B0596101651CBFD6C818 /* Pods-RxMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMVVM.debug.xcconfig"; path = "Target Support Files/Pods-RxMVVM/Pods-RxMVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		F3422A372402449300B5B05F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		F3422A392402457E00B5B05F /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		F3422A3B24026D6400B5B05F /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		F3422A3D24026DC600B5B05F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		F3422A402402719A00B5B05F /* ColorDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDetailView.swift; sourceTree = "<group>"; };
+		F3422A42240271A100B5B05F /* ColorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDetailViewController.swift; sourceTree = "<group>"; };
+		F3422A44240271A900B5B05F /* ColorDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDetailViewModel.swift; sourceTree = "<group>"; };
+		F3422A46240271B000B5B05F /* ColorDetailViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDetailViewCoordinator.swift; sourceTree = "<group>"; };
+		F3422A48240271B800B5B05F /* ColorDetailViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDetailViewBuilder.swift; sourceTree = "<group>"; };
+		F3422A4C240273D600B5B05F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		F3422A4E240273E200B5B05F /* ColorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorService.swift; sourceTree = "<group>"; };
+		F3422A50240274B900B5B05F /* JSONCodec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCodec.swift; sourceTree = "<group>"; };
+		F3D535D824023A4900A7D184 /* RxMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3D535DB24023A4900A7D184 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F3D535DF24023A4900A7D184 /* ColorListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorListViewController.swift; sourceTree = "<group>"; };
+		F3D535E424023A4D00A7D184 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3D535E724023A4D00A7D184 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F3D535E924023A4D00A7D184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3D535EE24023A4D00A7D184 /* RxMVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxMVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3D535F224023A4D00A7D184 /* RxMVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxMVVMTests.swift; sourceTree = "<group>"; };
+		F3D535F424023A4D00A7D184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3D5360524023B9100A7D184 /* ColorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorListView.swift; sourceTree = "<group>"; };
+		F3D5360724023C6900A7D184 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F3D5360924023CB900A7D184 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		F3D5360B24023DFC00A7D184 /* ColorListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorListViewModel.swift; sourceTree = "<group>"; };
+		F3D5360D24023E4700A7D184 /* ColorListViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorListViewCoordinator.swift; sourceTree = "<group>"; };
+		F3D5360F24023E4E00A7D184 /* ColorListViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorListViewBuilder.swift; sourceTree = "<group>"; };
+		F3D5361124023E7F00A7D184 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F3D535D524023A4900A7D184 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C84DCE1EC4254A5F97328FEF /* Pods_RxMVVM.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3D535EB24023A4D00A7D184 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27F0D0B26F85B13C52756A58 /* Pods_RxMVVMTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6DD396BAFD013CAFD302732D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ADA1B7DFA8152FAF9A393132 /* Pods_RxMVVM.framework */,
+				6170822D24E3683E82D5681C /* Pods_RxMVVMTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		80ECF2A64F6E1AD1AD9C00A7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F079B0596101651CBFD6C818 /* Pods-RxMVVM.debug.xcconfig */,
+				05F8505A44BE70E86307B38B /* Pods-RxMVVM.release.xcconfig */,
+				7A2AA438D72B10907A1A8071 /* Pods-RxMVVMTests.debug.xcconfig */,
+				B43046790A444527139F5C97 /* Pods-RxMVVMTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F3422A362402448C00B5B05F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F3422A372402449300B5B05F /* Coordinator.swift */,
+				F3422A3D24026DC600B5B05F /* BaseViewController.swift */,
+				F3422A3B24026D6400B5B05F /* BaseViewModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F3422A3F240270AD00B5B05F /* ColorDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F3422A4A240271C100B5B05F /* View */,
+				F3422A4B240271C800B5B05F /* Cell */,
+				F3422A402402719A00B5B05F /* ColorDetailView.swift */,
+				F3422A42240271A100B5B05F /* ColorDetailViewController.swift */,
+				F3422A44240271A900B5B05F /* ColorDetailViewModel.swift */,
+				F3422A46240271B000B5B05F /* ColorDetailViewCoordinator.swift */,
+				F3422A48240271B800B5B05F /* ColorDetailViewBuilder.swift */,
+			);
+			path = ColorDetail;
+			sourceTree = "<group>";
+		};
+		F3422A4A240271C100B5B05F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F3422A4B240271C800B5B05F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F3D535CF24023A4900A7D184 = {
+			isa = PBXGroup;
+			children = (
+				F3D535DA24023A4900A7D184 /* RxMVVM */,
+				F3D535F124023A4D00A7D184 /* RxMVVMTests */,
+				F3D535D924023A4900A7D184 /* Products */,
+				80ECF2A64F6E1AD1AD9C00A7 /* Pods */,
+				6DD396BAFD013CAFD302732D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F3D535D924023A4900A7D184 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3D535D824023A4900A7D184 /* RxMVVM.app */,
+				F3D535EE24023A4D00A7D184 /* RxMVVMTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3D535DA24023A4900A7D184 /* RxMVVM */ = {
+			isa = PBXGroup;
+			children = (
+				F3D535FE24023A6500A7D184 /* Resource */,
+				F3D535FD24023A6100A7D184 /* Source */,
+				F3D535FF24023A6D00A7D184 /* Support */,
+			);
+			path = RxMVVM;
+			sourceTree = "<group>";
+		};
+		F3D535F124023A4D00A7D184 /* RxMVVMTests */ = {
+			isa = PBXGroup;
+			children = (
+				F3D535F224023A4D00A7D184 /* RxMVVMTests.swift */,
+				F3D535F424023A4D00A7D184 /* Info.plist */,
+			);
+			path = RxMVVMTests;
+			sourceTree = "<group>";
+		};
+		F3D535FD24023A6100A7D184 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F3D5361A24023F1B00A7D184 /* Extension */,
+				F3D5360224023AC600A7D184 /* Common */,
+				F3D5360024023AB400A7D184 /* Model */,
+				F3D5360124023ABC00A7D184 /* Module */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		F3D535FE24023A6500A7D184 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F3D535E424023A4D00A7D184 /* Assets.xcassets */,
+				F3D5360924023CB900A7D184 /* Colors.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F3D535FF24023A6D00A7D184 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				F3D535E624023A4D00A7D184 /* LaunchScreen.storyboard */,
+				F3D535E924023A4D00A7D184 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		F3D5360024023AB400A7D184 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F3D5361524023ECB00A7D184 /* Service */,
+				F3D5361924023F0700A7D184 /* Util */,
+				F3D5361624023ED000A7D184 /* Data */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F3D5360124023ABC00A7D184 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				F3422A362402448C00B5B05F /* Base */,
+				F3D5360324023AD200A7D184 /* App */,
+				F3D5360424023ADB00A7D184 /* ColorList */,
+				F3422A3F240270AD00B5B05F /* ColorDetail */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		F3D5360224023AC600A7D184 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F3D5360724023C6900A7D184 /* Constants.swift */,
+				F3422A392402457E00B5B05F /* Logger.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F3D5360324023AD200A7D184 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F3D535DB24023A4900A7D184 /* AppDelegate.swift */,
+				F3D5361124023E7F00A7D184 /* AppCoordinator.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F3D5360424023ADB00A7D184 /* ColorList */ = {
+			isa = PBXGroup;
+			children = (
+				F3D5361324023E9700A7D184 /* View */,
+				F3D5361424023E9B00A7D184 /* Cell */,
+				F3D5360524023B9100A7D184 /* ColorListView.swift */,
+				F3D535DF24023A4900A7D184 /* ColorListViewController.swift */,
+				F3D5360B24023DFC00A7D184 /* ColorListViewModel.swift */,
+				F3D5360D24023E4700A7D184 /* ColorListViewCoordinator.swift */,
+				F3D5360F24023E4E00A7D184 /* ColorListViewBuilder.swift */,
+			);
+			path = ColorList;
+			sourceTree = "<group>";
+		};
+		F3D5361324023E9700A7D184 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F3D5361424023E9B00A7D184 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F3D5361524023ECB00A7D184 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F3422A4C240273D600B5B05F /* NetworkService.swift */,
+				F3422A4E240273E200B5B05F /* ColorService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		F3D5361624023ED000A7D184 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F3D5361924023F0700A7D184 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				F3422A50240274B900B5B05F /* JSONCodec.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		F3D5361A24023F1B00A7D184 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F3D535D724023A4900A7D184 /* RxMVVM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3D535F724023A4D00A7D184 /* Build configuration list for PBXNativeTarget "RxMVVM" */;
+			buildPhases = (
+				3D4D3F648DEAD21EFD43B8B1 /* [CP] Check Pods Manifest.lock */,
+				F3D535D424023A4900A7D184 /* Sources */,
+				F3D535D524023A4900A7D184 /* Frameworks */,
+				F3D535D624023A4900A7D184 /* Resources */,
+				C1AFDB5B00B46577FBA5FAA5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RxMVVM;
+			productName = RxMVVM;
+			productReference = F3D535D824023A4900A7D184 /* RxMVVM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F3D535ED24023A4D00A7D184 /* RxMVVMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3D535FA24023A4D00A7D184 /* Build configuration list for PBXNativeTarget "RxMVVMTests" */;
+			buildPhases = (
+				B394ECF65E65CA9267728AC3 /* [CP] Check Pods Manifest.lock */,
+				F3D535EA24023A4D00A7D184 /* Sources */,
+				F3D535EB24023A4D00A7D184 /* Frameworks */,
+				F3D535EC24023A4D00A7D184 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3D535F024023A4D00A7D184 /* PBXTargetDependency */,
+			);
+			name = RxMVVMTests;
+			productName = RxMVVMTests;
+			productReference = F3D535EE24023A4D00A7D184 /* RxMVVMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F3D535D024023A4900A7D184 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = JSilver;
+				TargetAttributes = {
+					F3D535D724023A4900A7D184 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					F3D535ED24023A4D00A7D184 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = F3D535D724023A4900A7D184;
+					};
+				};
+			};
+			buildConfigurationList = F3D535D324023A4900A7D184 /* Build configuration list for PBXProject "RxMVVM" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F3D535CF24023A4900A7D184;
+			productRefGroup = F3D535D924023A4900A7D184 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F3D535D724023A4900A7D184 /* RxMVVM */,
+				F3D535ED24023A4D00A7D184 /* RxMVVMTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F3D535D624023A4900A7D184 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3D5360A24023CB900A7D184 /* Colors.xcassets in Resources */,
+				F3D535E824023A4D00A7D184 /* LaunchScreen.storyboard in Resources */,
+				F3D535E524023A4D00A7D184 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3D535EC24023A4D00A7D184 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3D4D3F648DEAD21EFD43B8B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxMVVM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B394ECF65E65CA9267728AC3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxMVVMTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1AFDB5B00B46577FBA5FAA5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxMVVM/Pods-RxMVVM-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxMVVM/Pods-RxMVVM-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RxMVVM/Pods-RxMVVM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F3D535D424023A4900A7D184 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3422A3C24026D6400B5B05F /* BaseViewModel.swift in Sources */,
+				F3D5360C24023DFC00A7D184 /* ColorListViewModel.swift in Sources */,
+				F3D5360E24023E4700A7D184 /* ColorListViewCoordinator.swift in Sources */,
+				F3D535E024023A4900A7D184 /* ColorListViewController.swift in Sources */,
+				F3422A4D240273D600B5B05F /* NetworkService.swift in Sources */,
+				F3D5361024023E4E00A7D184 /* ColorListViewBuilder.swift in Sources */,
+				F3422A3E24026DC600B5B05F /* BaseViewController.swift in Sources */,
+				F3D5361224023E7F00A7D184 /* AppCoordinator.swift in Sources */,
+				F3422A4F240273E200B5B05F /* ColorService.swift in Sources */,
+				F3422A3A2402457E00B5B05F /* Logger.swift in Sources */,
+				F3422A51240274B900B5B05F /* JSONCodec.swift in Sources */,
+				F3422A49240271B800B5B05F /* ColorDetailViewBuilder.swift in Sources */,
+				F3422A47240271B000B5B05F /* ColorDetailViewCoordinator.swift in Sources */,
+				F3422A412402719A00B5B05F /* ColorDetailView.swift in Sources */,
+				F3D5360624023B9100A7D184 /* ColorListView.swift in Sources */,
+				F3422A45240271A900B5B05F /* ColorDetailViewModel.swift in Sources */,
+				F3D535DC24023A4900A7D184 /* AppDelegate.swift in Sources */,
+				F3D5360824023C6900A7D184 /* Constants.swift in Sources */,
+				F3422A382402449300B5B05F /* Coordinator.swift in Sources */,
+				F3422A43240271A100B5B05F /* ColorDetailViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3D535EA24023A4D00A7D184 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3D535F324023A4D00A7D184 /* RxMVVMTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F3D535F024023A4D00A7D184 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3D535D724023A4900A7D184 /* RxMVVM */;
+			targetProxy = F3D535EF24023A4D00A7D184 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F3D535E624023A4D00A7D184 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3D535E724023A4D00A7D184 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F3D535F524023A4D00A7D184 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F3D535F624023A4D00A7D184 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F3D535F824023A4D00A7D184 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F079B0596101651CBFD6C818 /* Pods-RxMVVM.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RxMVVM/Support/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jsilver.example.RxMVVM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F3D535F924023A4D00A7D184 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05F8505A44BE70E86307B38B /* Pods-RxMVVM.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RxMVVM/Support/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jsilver.example.RxMVVM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F3D535FB24023A4D00A7D184 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A2AA438D72B10907A1A8071 /* Pods-RxMVVMTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RxMVVMTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jsilver.example.RxMVVMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RxMVVM.app/RxMVVM";
+			};
+			name = Debug;
+		};
+		F3D535FC24023A4D00A7D184 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B43046790A444527139F5C97 /* Pods-RxMVVMTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RxMVVMTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jsilver.example.RxMVVMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RxMVVM.app/RxMVVM";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F3D535D324023A4900A7D184 /* Build configuration list for PBXProject "RxMVVM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3D535F524023A4D00A7D184 /* Debug */,
+				F3D535F624023A4D00A7D184 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3D535F724023A4D00A7D184 /* Build configuration list for PBXNativeTarget "RxMVVM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3D535F824023A4D00A7D184 /* Debug */,
+				F3D535F924023A4D00A7D184 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3D535FA24023A4D00A7D184 /* Build configuration list for PBXNativeTarget "RxMVVMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3D535FB24023A4D00A7D184 /* Debug */,
+				F3D535FC24023A4D00A7D184 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F3D535D024023A4900A7D184 /* Project object */;
+}
