@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: - Lifecycle
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        registerDependencies()
+        
         // Configure window & app coordinator
         let window = UIWindow(frame: UIScreen.main.bounds)
         coordinator = AppCoordinator(window: window)
@@ -29,7 +31,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: - Private
     private func registerDependencies() {
+        // Register base services
+        Container.shared.register(NetworkServiceProtocol.self, scope: .retain, container: "base") { NetworkService() }
         
+        // Register application services
+        Container.shared.register(ColorServiceProtocol.self) { ColorService() }
     }
 }
 

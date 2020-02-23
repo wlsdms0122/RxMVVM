@@ -14,11 +14,15 @@ enum Constants {
     // MARK: - Resource
     enum Resource {
         enum Font {
-            
+            static let headline: UIFont = .systemFont(ofSize: 24, weight: .black)
+            static let body: UIFont = .systemFont(ofSize: 17, weight: .regular)
         }
         
         enum Color {
+            static let clear: UIColor = .clear
+            
             static let background: UIColor = UIColor(named: "Background")!
+            static let groupedBackground: UIColor = UIColor(named: "Grouped Background")!
             
             static let primary: UIColor = UIColor(named: "Primary")!
         }

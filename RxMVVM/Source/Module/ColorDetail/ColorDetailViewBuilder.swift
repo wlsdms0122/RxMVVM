@@ -11,7 +11,7 @@ import UIKit
 class ColorDetailViewBuilder: Builder {
     // MARK: - Dependency
     struct Dependency {
-        let id: String
+        let color: Color
     }
     
     // MARK: - Property
@@ -24,9 +24,9 @@ class ColorDetailViewBuilder: Builder {
     
     // MARK: - Public
     func build() -> (UIViewController, ViewCoordinatorType)? {
-        let coordinator = ColorListViewCoordinator()
-        let viewModel = ColorListViewModel()
-        let viewController = ColorListViewController(viewModel: viewModel, coordinator: coordinator)
+        let coordinator = ColorDetailViewCoordinator()
+        let viewModel = ColorDetailViewModel(color: dependency.color)
+        let viewController = ColorDetailViewController(viewModel: viewModel, coordinator: coordinator)
         
         // DI
         coordinator.viewController = viewController

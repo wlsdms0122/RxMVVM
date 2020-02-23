@@ -6,10 +6,8 @@
 //  Copyright © 2020 JSilver. All rights reserved.
 //
 
-protocol BaseViewModel {
-    associatedtype Input
-    associatedtype Output
-    
-    var input: Input { get }
-    var output: Output { get }
+import RxSwift
+
+class BaseViewModel {
+    var disposeBag: DisposeBag = DisposeBag()
 }

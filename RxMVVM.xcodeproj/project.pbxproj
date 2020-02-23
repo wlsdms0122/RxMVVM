@@ -21,6 +21,14 @@
 		F3422A4D240273D600B5B05F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3422A4C240273D600B5B05F /* NetworkService.swift */; };
 		F3422A4F240273E200B5B05F /* ColorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3422A4E240273E200B5B05F /* ColorService.swift */; };
 		F3422A51240274B900B5B05F /* JSONCodec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3422A50240274B900B5B05F /* JSONCodec.swift */; };
+		F3422A53240294FA00B5B05F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3422A52240294FA00B5B05F /* Color.swift */; };
+		F3422A55240299DB00B5B05F /* ColorListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3422A54240299DB00B5B05F /* ColorListCellViewModel.swift */; };
+		F3422A572402A7E400B5B05F /* ColorListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3422A562402A7E400B5B05F /* ColorListCell.swift */; };
+		F3422A592402A94100B5B05F /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3422A582402A94100B5B05F /* UIColor+hex.swift */; };
+		F3422A5B2402ABED00B5B05F /* UIViewController+rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3422A5A2402ABED00B5B05F /* UIViewController+rx.swift */; };
+		F3422A612402ADF200B5B05F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F3422A632402ADF200B5B05F /* Localizable.strings */; };
+		F3422A672402AE3B00B5B05F /* String+localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3422A662402AE3B00B5B05F /* String+localize.swift */; };
+		F3422A692402B3FC00B5B05F /* CALayer+shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3422A682402B3FC00B5B05F /* CALayer+shadow.swift */; };
 		F3D535DC24023A4900A7D184 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D535DB24023A4900A7D184 /* AppDelegate.swift */; };
 		F3D535E024023A4900A7D184 /* ColorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D535DF24023A4900A7D184 /* ColorListViewController.swift */; };
 		F3D535E524023A4D00A7D184 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3D535E424023A4D00A7D184 /* Assets.xcassets */; };
@@ -64,6 +72,16 @@
 		F3422A4C240273D600B5B05F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F3422A4E240273E200B5B05F /* ColorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorService.swift; sourceTree = "<group>"; };
 		F3422A50240274B900B5B05F /* JSONCodec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCodec.swift; sourceTree = "<group>"; };
+		F3422A52240294FA00B5B05F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		F3422A54240299DB00B5B05F /* ColorListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorListCellViewModel.swift; sourceTree = "<group>"; };
+		F3422A562402A7E400B5B05F /* ColorListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorListCell.swift; sourceTree = "<group>"; };
+		F3422A582402A94100B5B05F /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
+		F3422A5A2402ABED00B5B05F /* UIViewController+rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+rx.swift"; sourceTree = "<group>"; };
+		F3422A622402ADF200B5B05F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F3422A642402AE0600B5B05F /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		F3422A652402AE0600B5B05F /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F3422A662402AE3B00B5B05F /* String+localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localize.swift"; sourceTree = "<group>"; };
+		F3422A682402B3FC00B5B05F /* CALayer+shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+shadow.swift"; sourceTree = "<group>"; };
 		F3D535D824023A4900A7D184 /* RxMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D535DB24023A4900A7D184 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3D535DF24023A4900A7D184 /* ColorListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorListViewController.swift; sourceTree = "<group>"; };
@@ -136,7 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				F3422A4A240271C100B5B05F /* View */,
-				F3422A4B240271C800B5B05F /* Cell */,
+				F3422A6A2402BA3600B5B05F /* Cell */,
 				F3422A402402719A00B5B05F /* ColorDetailView.swift */,
 				F3422A42240271A100B5B05F /* ColorDetailViewController.swift */,
 				F3422A44240271A900B5B05F /* ColorDetailViewModel.swift */,
@@ -153,7 +171,31 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		F3422A4B240271C800B5B05F /* Cell */ = {
+		F3422A5E2402AD9400B5B05F /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				F3D535E424023A4D00A7D184 /* Assets.xcassets */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		F3422A5F2402ADA500B5B05F /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				F3D5360924023CB900A7D184 /* Colors.xcassets */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		F3422A602402ADB000B5B05F /* String */ = {
+			isa = PBXGroup;
+			children = (
+				F3422A632402ADF200B5B05F /* Localizable.strings */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		F3422A6A2402BA3600B5B05F /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -213,8 +255,9 @@
 		F3D535FE24023A6500A7D184 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				F3D535E424023A4D00A7D184 /* Assets.xcassets */,
-				F3D5360924023CB900A7D184 /* Colors.xcassets */,
+				F3422A5E2402AD9400B5B05F /* Image */,
+				F3422A5F2402ADA500B5B05F /* Color */,
+				F3422A602402ADB000B5B05F /* String */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -291,6 +334,8 @@
 		F3D5361424023E9B00A7D184 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				F3422A562402A7E400B5B05F /* ColorListCell.swift */,
+				F3422A54240299DB00B5B05F /* ColorListCellViewModel.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -307,6 +352,7 @@
 		F3D5361624023ED000A7D184 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				F3422A52240294FA00B5B05F /* Color.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -322,6 +368,10 @@
 		F3D5361A24023F1B00A7D184 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				F3422A662402AE3B00B5B05F /* String+localize.swift */,
+				F3422A582402A94100B5B05F /* UIColor+hex.swift */,
+				F3422A5A2402ABED00B5B05F /* UIViewController+rx.swift */,
+				F3422A682402B3FC00B5B05F /* CALayer+shadow.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -393,6 +443,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = F3D535CF24023A4900A7D184;
 			productRefGroup = F3D535D924023A4900A7D184 /* Products */;
@@ -411,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3D5360A24023CB900A7D184 /* Colors.xcassets in Resources */,
+				F3422A612402ADF200B5B05F /* Localizable.strings in Resources */,
 				F3D535E824023A4D00A7D184 /* LaunchScreen.storyboard in Resources */,
 				F3D535E524023A4D00A7D184 /* Assets.xcassets in Resources */,
 			);
@@ -496,21 +548,28 @@
 			files = (
 				F3422A3C24026D6400B5B05F /* BaseViewModel.swift in Sources */,
 				F3D5360C24023DFC00A7D184 /* ColorListViewModel.swift in Sources */,
+				F3422A53240294FA00B5B05F /* Color.swift in Sources */,
 				F3D5360E24023E4700A7D184 /* ColorListViewCoordinator.swift in Sources */,
+				F3422A692402B3FC00B5B05F /* CALayer+shadow.swift in Sources */,
 				F3D535E024023A4900A7D184 /* ColorListViewController.swift in Sources */,
 				F3422A4D240273D600B5B05F /* NetworkService.swift in Sources */,
 				F3D5361024023E4E00A7D184 /* ColorListViewBuilder.swift in Sources */,
 				F3422A3E24026DC600B5B05F /* BaseViewController.swift in Sources */,
 				F3D5361224023E7F00A7D184 /* AppCoordinator.swift in Sources */,
+				F3422A592402A94100B5B05F /* UIColor+hex.swift in Sources */,
 				F3422A4F240273E200B5B05F /* ColorService.swift in Sources */,
 				F3422A3A2402457E00B5B05F /* Logger.swift in Sources */,
 				F3422A51240274B900B5B05F /* JSONCodec.swift in Sources */,
+				F3422A672402AE3B00B5B05F /* String+localize.swift in Sources */,
 				F3422A49240271B800B5B05F /* ColorDetailViewBuilder.swift in Sources */,
+				F3422A5B2402ABED00B5B05F /* UIViewController+rx.swift in Sources */,
 				F3422A47240271B000B5B05F /* ColorDetailViewCoordinator.swift in Sources */,
+				F3422A572402A7E400B5B05F /* ColorListCell.swift in Sources */,
 				F3422A412402719A00B5B05F /* ColorDetailView.swift in Sources */,
 				F3D5360624023B9100A7D184 /* ColorListView.swift in Sources */,
 				F3422A45240271A900B5B05F /* ColorDetailViewModel.swift in Sources */,
 				F3D535DC24023A4900A7D184 /* AppDelegate.swift in Sources */,
+				F3422A55240299DB00B5B05F /* ColorListCellViewModel.swift in Sources */,
 				F3D5360824023C6900A7D184 /* Constants.swift in Sources */,
 				F3422A382402449300B5B05F /* Coordinator.swift in Sources */,
 				F3422A43240271A100B5B05F /* ColorDetailViewController.swift in Sources */,
@@ -536,10 +595,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		F3422A632402ADF200B5B05F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3422A622402ADF200B5B05F /* en */,
+				F3422A652402AE0600B5B05F /* ko */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		F3D535E624023A4D00A7D184 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F3D535E724023A4D00A7D184 /* Base */,
+				F3422A642402AE0600B5B05F /* ko */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -551,6 +620,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -597,7 +667,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -611,6 +681,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -651,7 +722,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

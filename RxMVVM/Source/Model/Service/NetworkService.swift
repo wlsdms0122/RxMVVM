@@ -11,11 +11,20 @@ import RxSwift
 import Alamofire
 
 protocol NetworkServiceProtocol {
-    
+    func fetchColors() -> Single<[Color]>
 }
 
 class NetworkService: NetworkServiceProtocol {
-    
+    func fetchColors() -> Single<[Color]> {
+        ApiProvider<GithubApiTarget>.request(.colors)
+            .delay(.seconds(1), scheduler: MainScheduler.instance)
+            .do(onSuccess: { _ in
+                // Random error occur (25%)
+                if arc4random() % 5 == 0 {
+                    throw NetworkError.badRequest
+                }
+            })
+    }
 }
 
 enum NetworkError: Error {
@@ -26,8 +35,8 @@ enum NetworkError: Error {
     case unknown
 }
 
-// MARK: - api provider
-struct ApiProvider<API: ApiType> {
+// MARK: - API Provider
+fileprivate struct ApiProvider<API: ApiType> {
     static func request<Model: Codable>(_ api: API) -> Single<Model> {
         Logger.info(
             """
@@ -73,7 +82,7 @@ struct ApiProvider<API: ApiType> {
     }
 }
 
-// MARK: - api type
+// MARK: - API Type
 protocol ApiType {
     /// Base url of api
     var baseUrl: URL { get }
@@ -93,4 +102,26 @@ protocol ApiType {
 
 extension ApiType {
     var url: URL { baseUrl.appendingPathComponent(path) }
+}
+
+// MARK: - API Target
+enum GithubApiTarget: ApiType {
+    case colors
+    
+    var baseUrl: URL {
+        URL(string: "https://raw.githubusercontent.com/wlsdms0122/RxMVVM/develop")!
+    }
+    
+    var path: String {
+        switch self {
+        case .colors:
+            return "API/colors.json"
+        }
+    }
+    
+    var method: HTTPMethod { .get }
+    
+    var parameters: Parameters? { nil }
+    
+    var headers: HTTPHeaders? { nil }
 }
