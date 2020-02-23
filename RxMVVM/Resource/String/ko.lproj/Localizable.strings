@@ -1,0 +1,13 @@
+/* 
+  Localizables.strings
+  RxMVVM
+
+  Created by JSilver on 2020/02/23.
+  Copyright © 2020 JSilver. All rights reserved.
+*/
+
+// MARK: - Common
+"common_confirm_title" = "확인";
+
+// MARK: - Screen title
+"color_list_title" = "색상 목록";

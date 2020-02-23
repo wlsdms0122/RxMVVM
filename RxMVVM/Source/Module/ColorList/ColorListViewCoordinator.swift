@@ -11,7 +11,7 @@ import UIKit
 class ColorListViewCoordinator: ViewCoordinator {
     // MARK: - Route
     enum Route {
-        case detail(id: String)
+        case detail(color: Color)
     }
     
     // MARK: - Property
@@ -19,6 +19,7 @@ class ColorListViewCoordinator: ViewCoordinator {
     var dismiss: ((UIViewController, Bool) -> Void)?
     
     // MARK: - Public
+    @discardableResult
     func present(for route: Route, animated: Bool) -> UIViewController? {
         guard case (let controller, var coordinator)? = get(for: route) else { return nil }
         let presentingViewController = controller
@@ -35,8 +36,8 @@ class ColorListViewCoordinator: ViewCoordinator {
     
     func get(for route: Route) -> (controller: UIViewController, coordinator: ViewCoordinatorType)? {
         switch route {
-        case let .detail(id: id):
-            let dependency = ColorDetailViewBuilder.Dependency(id: id)
+        case let .detail(color: color):
+            let dependency = ColorDetailViewBuilder.Dependency(color: color)
             return ColorDetailViewBuilder(with: dependency).build()
         }
     }
