@@ -1,0 +1,102 @@
+[
+    {
+        "name":"KSU PURPLE",
+        "hex":"#541388",
+        "isFavorite":true
+    },
+    {
+        "name":"DOGWOOD ROSE",
+        "hex":"#D90368",
+        "isFavorite":true
+    },
+    {
+        "name":"EGGSHELL",
+        "hex":"#F1E9DA",
+        "isFavorite":true
+    },
+    {
+        "name":"SPACE CADET",
+        "hex":"#2E294E",
+        "isFavorite":false
+    },
+    {
+        "name":"YELLOW",
+        "hex":"#FFD400",
+        "isFavorite":false
+    },
+    {
+        "name":"UMBER",
+        "hex":"#5C573E",
+        "isFavorite":true
+    },
+    {
+        "name":"MIDDLE GREEN YELLOW",
+        "hex":"#A5B452",
+        "isFavorite":false
+    },
+    {
+        "name":"STRAW",
+        "hex":"#C8D96F",
+        "isFavorite":true
+    },
+    {
+        "name":"GRANNY SMITH APPLE",
+        "hex":"#C4F7A1",
+        "isFavorite":false
+    },
+    {
+        "name":"PEWTER BLUE",
+        "hex":"#9BA7C0",
+        "isFavorite":false
+    },
+    {
+        "name":"DUST STORM",
+        "hex":"#EAC8CA",
+        "isFavorite":false
+    },
+    {
+        "name":"PINK LACE",
+        "hex":"#F2D5F8",
+        "isFavorite":true
+    },
+    {
+        "name":"THISTLE",
+        "hex":"#E6C0E9",
+        "isFavorite":false
+    },
+    {
+        "name":"LILAC",
+        "hex":"#BFABCB",
+        "isFavorite":false
+    },
+    {
+        "name":"GRAY BLUE",
+        "hex":"#8D89A6",
+        "isFavorite":true
+    },
+    {
+        "name":"MEDIUM PURPLE",
+        "hex":"#9381FF",
+        "isFavorite":false
+    },
+    {
+        "name":"PERIWINKLE",
+        "hex":"#B8B8FF",
+        "isFavorite":false
+    },
+    {
+        "name":"GHOST WHITE",
+        "hex":"#F8F7FF",
+        "isFavorite":false
+    },
+    {
+        "name":"PAPAYA WHIP",
+        "hex":"#FFEEDD",
+        "isFavorite":false
+    },
+    {
+        "name":"PEACH PUFF",
+        "hex":"#FFD8BE",
+        "isFavorite":false
+    }
+]
