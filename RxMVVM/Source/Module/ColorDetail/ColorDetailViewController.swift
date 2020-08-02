@@ -36,23 +36,27 @@ class ColorDetailViewController: BaseViewController<ColorDetailViewModel, ColorD
         
         // MARK: Output
         // Title
-        viewModel.name
+        viewModel.output.name
+            .asDriver(onErrorJustReturn: "")
             .drive(rx.title)
             .disposed(by: disposeBag)
         
         // Color
-        viewModel.hex
+        viewModel.output.hex
+            .asDriver(onErrorJustReturn: "")
             .map { UIColor(hex: $0) }
             .drive(colorView.rx.backgroundColor)
             .disposed(by: disposeBag)
         
         // Name
-        viewModel.name
+        viewModel.output.name
+            .asDriver(onErrorJustReturn: "")
             .drive(colorNameLabel.rx.text)
             .disposed(by: disposeBag)
         
         // Hex
-        viewModel.hex
+        viewModel.output.hex
+            .asDriver(onErrorJustReturn: "")
             .drive(colorHexLabel.rx.text)
             .disposed(by: disposeBag)
     }
