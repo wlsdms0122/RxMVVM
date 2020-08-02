@@ -10,9 +10,6 @@ import UIKit
 import SnapKit
 
 class ColorListView: UIView {
-    // MARK: - Constant
-    static let COLOR_LIST_CELL_IDENTIFIER: String = String(describing: ColorListCell.self)
-    
     // MARK: - View property
     let activityIndicator: UIActivityIndicatorView = {
         let view = UIActivityIndicatorView(style: .large)
@@ -22,7 +19,7 @@ class ColorListView: UIView {
     let colorTableview: UITableView = {
         let view = UITableView()
         
-        view.register(ColorListCell.self, forCellReuseIdentifier: COLOR_LIST_CELL_IDENTIFIER)
+        view.register(ColorListCell.self, forCellReuseIdentifier: ColorListCell.IDENTIFIER)
         
         return view
     }()

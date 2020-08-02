@@ -7,36 +7,40 @@
 //
 
 import RxSwift
-import RxCocoa
 
-class ColorListCellViewModel: BaseViewModel {
+class ColorListCellViewModel: BaseViewModel, ViewModel {
     // MARK: - Input
     struct Input {
         
     }
+    let input: Input = Input()
     
     // MARK: - Output
-    var name: Driver<String> { _name.asDriver() }
-    var hex: Driver<String> { _hex.asDriver() }
-    var isFavorite: Driver<Bool> { _isFavorite.asDriver() }
+    struct Output {
+        let name: Observable<String>
+        let hex: Observable<String>
+        let isFavorite: Observable<Bool>
+    }
+    let output: Output
     
     // MARK: - State
-    private let _name: BehaviorRelay<String>
-    private let _hex: BehaviorRelay<String>
-    private let _isFavorite: BehaviorRelay<Bool>
     
     // MARK: - Property
-    var input: Input = Input()
-    
     let color: Color
     
     // MARK: - Constructor
     init(color: Color) {
         self.color = color
         
-        _name = BehaviorRelay(value: color.name)
-        _hex = BehaviorRelay(value: color.hex)
-        _isFavorite = BehaviorRelay(value: color.isFavorite)
+        let name = BehaviorSubject<String>(value: color.name)
+        let hex = BehaviorSubject<String>(value: color.hex)
+        let isFavorite = BehaviorSubject<Bool>(value: color.isFavorite)
+        
+        output = Output(
+            name: name,
+            hex: hex,
+            isFavorite: isFavorite
+        )
     }
     
     // MARK: - Public

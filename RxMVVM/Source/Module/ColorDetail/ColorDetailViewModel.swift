@@ -7,30 +7,34 @@
 //
 
 import RxSwift
-import RxCocoa
-import RxDataSources
 
-class ColorDetailViewModel: BaseViewModel {
+class ColorDetailViewModel: BaseViewModel, ViewModel {
     // MARK: - Input
     struct Input {
         
     }
+    let input: Input = Input()
     
     // MARK: - Output
-    var name: Driver<String> { _name.asDriver() }
-    var hex: Driver<String> { _hex.asDriver() }
+    struct Output {
+        let name: Observable<String>
+        let hex: Observable<String>
+    }
+    let output: Output
     
     // MARK: - State
-    private let _name: BehaviorRelay<String>
-    private let _hex: BehaviorRelay<String>
     
     // MARK: - Property
-    var input: Input = Input()
     
     // MARK: - Constructor
     init(color: Color) {
-        _name = BehaviorRelay(value: color.name)
-        _hex = BehaviorRelay(value: color.hex)
+        let name = BehaviorSubject(value: color.name)
+        let hex = BehaviorSubject(value: color.hex)
+        
+        output = Output(
+            name: name,
+            hex: hex
+        )
         super.init()
     }
     

@@ -24,7 +24,7 @@ class ColorListViewController: BaseViewController<ColorListViewModel, ColorListV
     
     // MARK: - Property
     private let dataSource = RxTableViewSectionedReloadDataSource<ColorListSection>(configureCell: { dataSource, tableView, indexPath, viewModel in
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ColorListView.COLOR_LIST_CELL_IDENTIFIER, for: indexPath) as? ColorListCell else { fatalError() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ColorListCell.IDENTIFIER, for: indexPath) as? ColorListCell else { fatalError() }
         cell.viewModel = viewModel
         return cell
     })
@@ -64,25 +64,30 @@ class ColorListViewController: BaseViewController<ColorListViewModel, ColorListV
         
         // MARK: Output
         // Sections
-        viewModel.colors
+        viewModel.output.colors
+            .asDriver(onErrorJustReturn: [])
+            .map { $0.map { ColorListCellViewModel(color: $0) } }
+            .map { [ColorListSection(model: Void(), items: $0)] }
             .drive(colorTableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
         
         // Is filtered
-        viewModel.isFiltered
+        viewModel.output.isFiltered
+            .asDriver(onErrorJustReturn: false)
             .drive(favoriteButton.rx.isSelected)
             .disposed(by: disposeBag)
         
         // Loading
-        viewModel.isLoading
+        viewModel.output.isLoading
+            .asDriver(onErrorJustReturn: false)
             .drive(onNext: { [weak self] in $0 ? self?.activityIndicator.startAnimating() : self?.activityIndicator.stopAnimating() })
             .disposed(by: disposeBag)
         
         // Error
-        viewModel.error
-            .asObservable()
+        viewModel.output.error
+            .asDriver(onErrorJustReturn: nil)
             .compactMap { $0 }
-            .subscribe(onNext: { [weak self] in
+            .drive(onNext: { [weak self] in
                 let alertViewController = UIAlertController(title: nil, message: $0, preferredStyle: .alert)
                 alertViewController.addAction(UIAlertAction(title: "common_confirm_title".localized, style: .default))
                 
@@ -99,3 +104,6 @@ class ColorListViewController: BaseViewController<ColorListViewModel, ColorListV
         Logger.verbose()
     }
 }
+
+typealias ColorListSection = SectionModel<Void, ColorListCellType>
+typealias ColorListCellType = ColorListCellViewModel

@@ -11,6 +11,9 @@ import RxSwift
 import RxCocoa
 
 class ColorListCell: UITableViewCell {
+    // MARK: - Constant
+    static let IDENTIFIER: String = String(describing: ColorListCell.self)
+    
     // MARK: - View property
     private let colorView: UIView = {
         let view = UIView()
@@ -62,16 +65,19 @@ class ColorListCell: UITableViewCell {
     
     // MARK: - Bind
     func bind(_ viewModel: ColorListCellViewModel) {
-        viewModel.hex
+        viewModel.output.hex
+            .asDriver(onErrorJustReturn: "")
             .map { UIColor(hex: $0) }
             .drive(colorView.rx.backgroundColor)
             .disposed(by: disposeBag)
         
-        viewModel.name
+        viewModel.output.name
+            .asDriver(onErrorJustReturn: "")
             .drive(colorNameLabel.rx.text)
             .disposed(by: disposeBag)
         
-        viewModel.hex
+        viewModel.output.hex
+            .asDriver(onErrorJustReturn: "")
             .drive(colorHexLabel.rx.text)
             .disposed(by: disposeBag)
     }
